@@ -20,21 +20,24 @@ Chains.
 Given a text, you can build up the Markov Model. A Markov Model captures the frequency of
 a specific letter/character appearing after a specific preceding string (which can be of varying
 length). The order of the Markov model is the length of that preceding string.
+
 For example, if we have the following text:
-a b d a c a b d a c b d a b d a c d a
+```a b d a c a b d a c b d a b d a c d a```
 We can build the following Markov Model of order 1:
-|---|---|-----|
-| a <br /> a | b <br /> c | 1/2 <br /> 1/2 |
-| b | d | 1   |
-| c <br /> c <br /> c | a <br /> b <br /> d | 1/3 <br /> 1/3 <br /> 1/3 |
-| d | a | 1   |
+
+| Chain | Probability |
+|-------|-----|
+| a  b <br /> a  c | 1/2 <br /> 1/2 |
+| b  d | 1   |
+| c  a <br /> c  b <br /> c  d | 1/3 <br /> 1/3 <br /> 1/3 |
+| d  a | 1   |
+
 This implies the following:
-• After the string ‘a’, half the time you find a ‘b’, and half the time you find a ‘c’.
-2
-• After the string ‘b’, you always find a ‘d’.
-• After the string ‘c’, one-third of the time you find letters ‘a’, ‘b’, or ‘d’ respectively (i.e., they
+1. After the string ‘a’, half the time you find a ‘b’, and half the time you find a ‘c’.
+2. After the string ‘b’, you always find a ‘d’.
+3. After the string ‘c’, one-third of the time you find letters ‘a’, ‘b’, or ‘d’ respectively (i.e., they
 are equally common after a ’c’).
-• After the string ‘d’, you always find an ‘a’.
+4. After the string ‘d’, you always find an ‘a’.
 You can think of these as probabilities (though so far, there is no randomness at all). Notice that
 in the text above the table, there are three instances when the character ‘a’ is followed by a ‘b’, and
 there are three instances when ‘a’ is followed by a ‘c’. Similarly, ‘b’ is always followed by a ‘d’, and
