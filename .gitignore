@@ -4,4 +4,4 @@
 .idea/vcs.xml
 
 # Build stuff
-out/**
+out/
