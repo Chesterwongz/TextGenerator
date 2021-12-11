@@ -1,0 +1,7 @@
+# User-specific stuff:
+.idea/workspace.xml
+.idea/dictionaries
+.idea/vcs.xml
+
+# Build stuff
+out/**
