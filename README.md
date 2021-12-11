@@ -96,5 +96,5 @@ The .txt files such as Alice.txt, hamlet.txt, etc and Test.in are used for you t
 3. Add the necessary CLI arguments:
     * args[0]: the order of the Markov Model
     * args[1]: the length of the text to generate
-    * args[2]: the filename for the input text
+    * args[2]: the filename for the input text <br />
     e.g. `4 50000 aesop.txt` will generate a 50000-word text based on the Aesop fables using a Markov Model of order 4.
