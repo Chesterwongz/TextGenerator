@@ -87,4 +87,14 @@ on the probability distribution indicated by the Markov Model.
 Once you have found the next character that way, you add it to the end of your string, and repeat
 the process as many times as you want!
 
+## How to Run?
+
 The .txt files such as Alice.txt, hamlet.txt, etc and Test.in are used for you to try the TextGenerator class.
+
+1. Open the project in IntelliJ
+2. Go to `Run` > `Edit Configurations` 
+3. Add the necessary CLI arguments:
+    * args[0]: the order of the Markov Model
+    * args[1]: the length of the text to generate
+    * args[2]: the filename for the input text
+    e.g. `4 50000 aesop.txt` will generate a 50000-word text based on the Aesop fables using a Markov Model of order 4.
